@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoConnectString = process.env.MONGODB_URI || "mongodb://localhost:27017/library5DB"
+const mongoConnectString = process.env.MONGODB_URI || "mongodb://localhost:27017/library6DB"
 
 // Wrap Mongoose around local connection to MongoDB
 mongoose.connect(mongoConnectString, {

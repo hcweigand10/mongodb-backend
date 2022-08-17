@@ -29,7 +29,7 @@ app.post('/create-library', (req,res) => {
         })
 })
 app.post('/add-book', (req,res) => {
-    Library.findOneAndUpdate({name: "Books"}, {$set: {books: req.body}},{ runValidators: true, new: true }, (err, data) => {
+    Library.findOneAndUpdate({name: "Books"}, {$addToSet: {books: req.body}},{ runValidators: true, new: true }, (err, data) => {
         if (err) {
           console.log(err);
         } else {
